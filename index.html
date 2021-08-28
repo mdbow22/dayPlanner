@@ -12,31 +12,72 @@
 <body>
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <header class="px-2 py-4 my-4 text-center border shadow-sm col-lg-5 justify-content-center" id="headerBox">
+            <header class="px-2 py-4 my-4 text-center border shadow-sm col-lg-5 justify-content-center white rounded" id="headerBox">
                 <h1>Workday Planner</h1>
                 <p class="col-lg-6 mx-auto">
                     Below is a simple planner for keeping track of a single day. Add in your events for the day, and they'll be saved and loaded when you visit.
                 </p>
             </header>
         </div>
-        <div class="row justify-content-center">
-            <ul class="border shadow-sm col-lg-5 list-group list-group-flush" id="hoursInDay">
+        <div class="d-flex flex-column align-items-center">
+            <ul class="rounded white border shadow-sm col-lg-5 list-group list-group-flush d-flex flex-column" id="hoursInDay">
+                <li class="list-group-item d-flex past" data-hour="8">
+                    <h5 class="timeOfDay">8</h5>
+                    <p>Lorem Ipsum dolor sit amet.</p>
+                </li>
+                <li class="list-group-item d-flex past" data-hour="9">
+                    <h5 class="timeOfDay">9</h5>
+                    <p>Lorem Ipsum dolor sit amet.</p>
+                </li>
+                <li class="list-group-item d-flex current" data-hour="10">
+                    <h5 class="timeOfDay">10</h5>
+                    <p>Lorem Ipsum dolor sit amet.</p>
+                </li>
+                <li class="list-group-item d-flex future" data-hour="11">
+                    <h5 class="timeOfDay">11</h5>
+                    <p>Lorem Ipsum dolor sit amet.</p>
+                </li>
+                <li class="list-group-item d-flex future" data-hour="12">
+                    <h5 class="timeOfDay">12</h5>
+                    <p>Lorem Ipsum dolor sit amet.</p>
+                </li>
+                <li class="list-group-item d-flex" data-hour="1">
+                    <h5 class="timeOfDay">1</h5>
+                    <p>Lorem Ipsum dolor sit amet.</p>
+                </li>
+                <li class="list-group-item d-flex" data-hour="2">
+                    <h5 class="timeOfDay">2</h5>
+                    <p>Lorem Ipsum dolor sit amet.</p>
+                </li>
+                <li class="list-group-item d-flex" data-hour="3">
+                    <h5 class="timeOfDay">3</h5>
+                    <p>Lorem Ipsum dolor sit amet.</p>
+                </li>
+                <li class="list-group-item d-flex" data-hour="4">
+                    <h5 class="timeOfDay">4</h5>
+                    <p>Lorem Ipsum dolor sit amet.</p>
+                </li>
+                <li class="list-group-item d-flex" data-hour="5">
+                    <h5 class="timeOfDay">5</h5>
+                    <p>Lorem Ipsum dolor sit amet.</p>
+                </li>
             </ul>
         </div>
-    </div>
-    <div class="modal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content" id='eventModal'>
-                <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+        <div class="modal" tabindex="-1" id="eventModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">New Event for <span class="curTime"></span></h5>
+                        <button type="button" class="btn-close" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="eventDesc">Write out the event info below.</label>
+                        <input type="text" id="eventDesc" class="form-control" placeholder="What are you doing?">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="dismissBtn">Close</button>
+                        <button type="button" class="btn btn-primary" id="saveBtn">Save</button>
+                    </div>
                 </div>
             </div>
         </div>

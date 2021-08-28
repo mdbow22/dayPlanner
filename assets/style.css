@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(235, 235, 235);
+}
+
+.timeOfDay {
+    padding-right: 10px;
+    border-right: 1px dotted black;
+    margin-right: 10px;
+    width: 3ch;
+    text-align: center;
+}
+
+.white {
+    background-color: rgb(255, 255, 255);
+}
+
+.current {
+    background-color: rgb(208, 238, 183);
+    border: rgb(237, 246, 229);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.past {
+    background-color: rgb(153, 153, 153);
+    color: rgb(187, 187, 187);
+}
+
+.future {
+    background-color: rgb(208, 235, 235);
+}

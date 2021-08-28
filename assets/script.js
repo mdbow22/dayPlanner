@@ -1,30 +1,47 @@
-let hoursList = document.getElementById('hoursInDay');
+/********************************
+ * Script for Adding Events 
+ ********************************/
 
-function init() {
-    generateDay();
+//Modal selectors
 
+//Modal itself
+let eventModal = new bootstrap.Modal(document.getElementById('eventModal'), {
+    backdrop: true,
+    keyboard: true,
+    focus: true
+})
+
+//Modal buttons
+let closeBtn = document.querySelector('.btn-close');
+let dismissBtn = document.getElementById('dismissBtn');
+let saveBtn = document.getElementById('saveBtn');
+
+//function to close modal
+let closeModal = function() {
+    eventModal.hide();
 }
 
-init();
+//eventListeners to close the modal
+closeBtn.addEventListener('click', closeModal);
+dismissBtn.addEventListener('click', closeModal);
 
-//Generates the HTML for the hours of the day
-function generateDay() {
-    let time = 8;
-    for (let i = 0; i < 9; i++) {
-        let hour = document.createElement('li');
-        hour.classList.add('list-group-item', 'eachHour', 'd-flex', 'btn');
-        hour.setAttribute('id', time + 'oClock');
-        hour.setAttribute('data-bs-toggle', 'modal');
-        hour.setAttribute('data-bs-target', 'eventModal');
-        hour.innerHTML = '<h5>' + time + '</h5>';
-        if (time === 12) {
-            time = 1;
-        } else {
-            time++;
-        }
+//Script for opening Modal
 
-        hoursList.appendChild(hour);
+//Selectors
+let timeList = document.getElementById('hoursInDay');
+let curTime = document.querySelector('.curTime');
+
+//function to Open Modal
+let openModal = function(event) {
+    let amPm;
+    if (event.target.dataset.hour < 8 || event.target.dataset.hour == 12) {
+        amPm = 'pm';
+    } else {
+        amPm = 'am';
     }
-    //then calls function to get events from local storage and populate them in each hour.
-    //then calls function to get current time and update classList for the line that is the current hour to add .active
+    curTime.textContent = event.target.dataset.hour + amPm;
+    eventModal.show();
 }
+
+//EventListener
+timeList.addEventListener('click', openModal);
