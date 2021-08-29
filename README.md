@@ -10,7 +10,7 @@ Small app to plan out a single work day
 
 ## Functionality
 
-[insert screenshot here]
+![screenshot of app functionality](https://github.com/mdbow22/dayPlanner/blob/4a3e5662551b4e59e52213db8eed1230daf31fbe/assets/images/screenshot.PNG)
 
 Simply click into each time block in order to start typing an event.
 
@@ -20,3 +20,5 @@ Color System:
 - Green: Current hour
 - Gray: The past
 - Blue: The future
+
+### Deployed App: https://mdbow22.github.io/dayPlanner/
