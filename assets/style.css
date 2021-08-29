@@ -29,3 +29,18 @@ body {
 .future {
     background-color: rgb(208, 235, 235);
 }
+
+#hoursInDay textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    flex-grow: 1;
+}
+
+.saveBtn {
+    background-color: rgb(255, 188, 188);
+    border: none;
+    height: inherit;
+    margin: none;
+}

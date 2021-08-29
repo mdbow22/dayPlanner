@@ -17,69 +17,61 @@
                 <p class="col-lg-6 mx-auto">
                     Below is a simple planner for keeping track of a single day. Add in your events for the day, and they'll be saved and loaded when you visit.
                 </p>
+                <h3 id="timeNow"></h3>
             </header>
         </div>
         <div class="d-flex flex-column align-items-center">
             <ul class="rounded white border shadow-sm col-lg-5 list-group list-group-flush d-flex flex-column" id="hoursInDay">
-                <li class="list-group-item d-flex past" data-hour="8">
+                <li class="list-group-item d-flex border px-0 py-0 past" data-hour="8">
                     <h5 class="timeOfDay">8</h5>
-                    <p>Lorem Ipsum dolor sit amet.</p>
+                    <textarea data-hour="8"></textarea>
+                    <button class="saveBtn" value="8">Save</button>
                 </li>
-                <li class="list-group-item d-flex past" data-hour="9">
+                <li class="list-group-item d-flex border px-0 py-0 past" data-hour="9">
                     <h5 class="timeOfDay">9</h5>
-                    <p>Lorem Ipsum dolor sit amet.</p>
+                    <textarea data-hour="9"></textarea>
+                    <button class="saveBtn" value="9">Save</button>
                 </li>
-                <li class="list-group-item d-flex current" data-hour="10">
+                <li class="list-group-item d-flex border px-0 py-0 current" data-hour="10">
                     <h5 class="timeOfDay">10</h5>
-                    <p>Lorem Ipsum dolor sit amet.</p>
+                    <textarea data-hour="10"></textarea>
+                    <button class="saveBtn" value="10">Save</button>
                 </li>
-                <li class="list-group-item d-flex future" data-hour="11">
+                <li class="list-group-item d-flex border px-0 py-0 future" data-hour="11">
                     <h5 class="timeOfDay">11</h5>
-                    <p>Lorem Ipsum dolor sit amet.</p>
+                    <textarea data-hour="11"></textarea>
+                    <button class="saveBtn" value="11">Save</button>
                 </li>
-                <li class="list-group-item d-flex future" data-hour="12">
+                <li class="list-group-item d-flex border px-0 py-0 future" data-hour="12">
                     <h5 class="timeOfDay">12</h5>
-                    <p>Lorem Ipsum dolor sit amet.</p>
+                    <textarea data-hour="12"></textarea>
+                    <button class="saveBtn" value="12">Save</button>
                 </li>
-                <li class="list-group-item d-flex" data-hour="1">
+                <li class="list-group-item d-flex border px-0 py-0" data-hour="13">
                     <h5 class="timeOfDay">1</h5>
-                    <p>Lorem Ipsum dolor sit amet.</p>
+                    <textarea data-hour="13"></textarea>
+                    <button class="saveBtn" value="1">Save</button>
                 </li>
-                <li class="list-group-item d-flex" data-hour="2">
+                <li class="list-group-item d-flex border px-0 py-0" data-hour="14">
                     <h5 class="timeOfDay">2</h5>
-                    <p>Lorem Ipsum dolor sit amet.</p>
+                    <textarea data-hour="14"></textarea>
+                    <button class="saveBtn" value="2">Save</button>
                 </li>
-                <li class="list-group-item d-flex" data-hour="3">
+                <li class="list-group-item d-flex border px-0 py-0" data-hour="15">
                     <h5 class="timeOfDay">3</h5>
-                    <p>Lorem Ipsum dolor sit amet.</p>
+                    <textarea data-hour="15"></textarea>
+                    <button class="saveBtn" value="3">Save</button>
                 </li>
-                <li class="list-group-item d-flex" data-hour="4">
+                <li class="list-group-item d-flex border px-0 py-0" data-hour="16">
                     <h5 class="timeOfDay">4</h5>
-                    <p>Lorem Ipsum dolor sit amet.</p>
+                    <textarea data-hour="16"></textarea>
+                    <button class="saveBtn" value="4">Save</button>
                 </li>
-                <li class="list-group-item d-flex" data-hour="5">
+                <li class="list-group-item d-flex border px-0 py-0" data-hour="17">
                     <h5 class="timeOfDay">5</h5>
-                    <p>Lorem Ipsum dolor sit amet.</p>
+                    <textarea data-hour="17"></textarea>
+                    <button class="saveBtn" value="5">Save</button>
                 </li>
-            </ul>
-        </div>
-        <div class="modal" tabindex="-1" id="eventModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">New Event for <span class="curTime"></span></h5>
-                        <button type="button" class="btn-close" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <label for="eventDesc">Write out the event info below.</label>
-                        <input type="text" id="eventDesc" class="form-control" placeholder="What are you doing?">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" id="dismissBtn">Close</button>
-                        <button type="button" class="btn btn-primary" id="saveBtn">Save</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
